@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/abit-magistral-railway/static/css/main.cd7e6213.css",
-    "main.js": "/abit-magistral-railway/static/js/main.77eb01f1.js",
+    "main.js": "/abit-magistral-railway/static/js/main.d9136250.js",
     "static/js/453.29b42e09.chunk.js": "/abit-magistral-railway/static/js/453.29b42e09.chunk.js",
     "index.html": "/abit-magistral-railway/index.html",
     "main.cd7e6213.css.map": "/abit-magistral-railway/static/css/main.cd7e6213.css.map",
-    "main.77eb01f1.js.map": "/abit-magistral-railway/static/js/main.77eb01f1.js.map",
+    "main.d9136250.js.map": "/abit-magistral-railway/static/js/main.d9136250.js.map",
     "453.29b42e09.chunk.js.map": "/abit-magistral-railway/static/js/453.29b42e09.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd7e6213.css",
-    "static/js/main.77eb01f1.js"
+    "static/js/main.d9136250.js"
   ]
 }
