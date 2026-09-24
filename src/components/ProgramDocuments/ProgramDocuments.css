@@ -1,0 +1,429 @@
+/* ProgramDocuments.css */
+
+/* Основная секция документов */
+.documents-section {
+    margin: 60px 0 40px 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Сетка из двух колонок */
+.documents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 25px;
+}
+
+/* Общие стили для обеих карточек */
+.document-item {
+    padding: 40px;
+    border-radius: 16px;
+    position: relative;
+    overflow: visible; /* Изменено с hidden на visible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+/* Первая карточка - оранжевая тема */
+.document-item:first-child {
+    background-color: #FFF7ED;
+    border-color: #F54A00;
+}
+
+/* Вторая карточка - синяя тема */
+.document-item:last-child {
+    background-color: #F4F4F8;
+    border-color: #323C8D;
+}
+
+/* Контейнер для текстового контента */
+.document-content {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+}
+
+/* Заголовок документа */
+.document-item h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Цвет заголовка для первой карточки */
+.document-item:first-child h3 {
+    color: #F54A00;
+}
+
+/* Цвет заголовка для второй карточки */
+.document-item:last-child h3 {
+    color: #323C8D;
+}
+
+/* Описание под заголовком */
+.document-item p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    flex-grow: 1;
+    color: #666;
+}
+
+/* Картинка справа - теперь выходит за пределы карточки */
+.document-image {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    width: 570px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    z-index: 1;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 20%;
+    top: 38%;
+    transform: translateY(-50%);
+}
+
+/* Иконка для первой карточки */
+.document-item:first-child .document-image {
+    color: #F54A00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='60' viewBox='0 0 24 24' fill='%23F54A00'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-4 18H7v-2h3v2zm5-4H7v-2h8v2zm0-4H7v-2h8v2zm-2-6V3.5L18.5 9H13z'/%3E%3C/svg%3E");
+}
+
+/* Иконка для второй карточки */
+.document-item:last-child .document-image {
+    color: #323C8D;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='60' viewBox='0 0 24 24' fill='%23323C8D'%3E%3Cpath d='M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z'/%3E%3C/svg%3E");
+}
+
+/* Стили для кнопок */
+.document-btn {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Кнопка для первой карточки */
+.document-item:first-child .document-btn {
+    background-color: #F54A00;
+    color: white;
+}
+
+/* Кнопка для второй карточки */
+.document-item:last-child .document-btn {
+    background-color: #323C8D;
+    color: white;
+}
+
+/* Эффект при наведении на кнопку */
+.document-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Эффект для первой кнопки */
+.document-item:first-child .document-btn:hover {
+    background-color: #e03d00;
+    box-shadow: 0 6px 15px rgba(245, 74, 0, 0.3);
+}
+
+/* Эффект для второй кнопки */
+.document-item:last-child .document-btn:hover {
+    background-color: #2a3477;
+    box-shadow: 0 6px 15px rgba(50, 60, 141, 0.3);
+}
+
+/* Иконка стрелки в кнопке */
+.document-btn::after {
+    content: '→';
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.document-btn:hover::after {
+    transform: translateX(5px);
+}
+
+/* Эффект при наведении на всю карточку */
+.document-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект для первой карточки */
+.document-item:first-child:hover {
+    box-shadow: 0 10px 30px rgba(245, 74, 0, 0.15);
+}
+
+/* Эффект для второй карточки */
+.document-item:last-child:hover {
+    box-shadow: 0 10px 30px rgba(50, 60, 141, 0.15);
+}
+
+/* Секция с примечаниями */
+.notes-section {
+    margin: 50px 0 60px 0;
+    padding: 30px 35px;
+    background-color: #f8faf8;
+    border-radius: 12px;
+    border-left: 5px solid #8BA474;
+    border-right: 1px solid #e0e6dd;
+    border-top: 1px solid #e0e6dd;
+    border-bottom: 1px solid #e0e6dd;
+}
+
+/* Заголовок примечаний */
+.notes-section h4 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.notes-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #8BA474;
+    border-radius: 2px;
+}
+
+/* Элемент примечания */
+.note-item {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Маркер перед примечанием */
+.note-item::before {
+    content: '•';
+    color: #8BA474;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Заголовок в примечании */
+.note-item strong {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Текст примечания */
+.note-item p {
+    color: #7f8c8d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 8px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Стрелка в тексте примечания */
+.note-item p::after {
+    content: '→';
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.note-item p:hover {
+    color: #8BA474;
+}
+
+.note-item p:hover::after {
+    transform: translateX(5px);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1100px) {
+    .documents-grid {
+        gap: 30px;
+    }
+
+    .document-item {
+        padding: 30px;
+        min-height: 250px;
+    }
+
+    .document-content {
+        max-width: 65%;
+    }
+
+    .document-item h3 {
+        font-size: 22px;
+    }
+
+    .document-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    .document-image {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+        right: -15px; /* Адаптируем для меньших экранов */
+    }
+}
+
+@media (max-width: 900px) {
+    .document-content {
+        max-width: 60%;
+    }
+
+    .document-image {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+        opacity: 0.9;
+        right: -10px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .document-item {
+        padding: 30px;
+        min-height: 220px;
+    }
+
+    .document-content {
+        max-width: 70%;
+    }
+
+    .document-item h3 {
+        font-size: 20px;
+    }
+
+    .document-item p {
+        font-size: 15px;
+    }
+
+    .document-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .document-image {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        opacity: 0.8;
+        right: -10px;
+    }
+
+    .notes-section {
+        padding: 20px 25px;
+        margin: 35px 0 40px 0;
+    }
+
+    .notes-section h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .note-item strong {
+        font-size: 16px;
+    }
+
+    .note-item p {
+        font-size: 14px;
+    }
+}
+
+/* Адаптивность для маленьких мобильных */
+@media (max-width: 480px) {
+    .documents-section {
+        margin: 40px 0 30px 0;
+    }
+
+    .document-item {
+        padding: 25px;
+        min-height: 200px;
+    }
+
+    .document-content {
+        max-width: 100%;
+    }
+
+    .document-image {
+        display: none;
+    }
+
+    .document-item h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .document-item p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .document-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .notes-section {
+        padding: 18px 20px;
+        margin: 30px 0 35px 0;
+    }
+
+    .notes-section h4 {
+        font-size: 17px;
+    }
+
+    .note-item {
+        padding-left: 20px;
+    }
+
+    .note-item strong {
+        font-size: 15px;
+    }
+}

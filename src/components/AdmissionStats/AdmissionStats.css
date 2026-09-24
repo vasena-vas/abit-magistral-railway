@@ -1,0 +1,554 @@
+/* AdmissionStats.css - ИСПРАВЛЕННАЯ ВЕРСИЯ */
+
+.admission-stats-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    margin: 30px 0; /* Уменьшен отступ сверху для всей секции */
+}
+
+/* Общие стили заголовков */
+.stats-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: left;
+    border: none;
+    padding: 0 0 0 5%;
+    margin-top: -2%; /* Уменьшен отступ сверху для заголовка Статистика поступления */
+}
+
+/* Специальный отступ для заголовка "Направления подготовки" */
+.stats-directions-block .stats-section-title {
+    margin-top: 40px; /* Добавлен отступ сверху перед Направления подготовки */
+    margin-bottom: 25px;
+    padding-left: 5%; /* Добавляем отступ как у заголовка Статистики поступления */
+}
+
+/* Контейнер статистики */
+.stats-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-left: -5%;
+}
+
+.stats-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Grid раскладка для цифр */
+.stats-grid-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.stats-grid-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px 15px;
+    align-items: start;
+}
+
+/* Цифра - занимает обе строки в первой колонке */
+.stats-grid-number {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Анимация подскакивания для цифры */
+.stats-grid-number:hover {
+    transform: translateY(-10px);
+}
+
+/* Название - вторая колонка, первая строка */
+.stats-grid-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+}
+
+/* Описание - вторая колонка, вторая строка */
+.stats-grid-desc {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.4;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+}
+
+/* Убираем ненужные классы */
+.stats-text-container {
+    display: contents;
+}
+
+/* Карточка соцсетей */
+.stats-social-container {
+    flex: 0 0 300px;
+}
+
+.stats-social-card {
+    padding: 25px;
+    background-color: #F4F4F8;
+    border: 2px solid #323C8D;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stats-social-label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #323C8D;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 700;
+}
+
+.stats-social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.stats-social-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #323C8D;
+    background-color: #F4F4F8;
+    border: 2px solid #323C8D;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.stats-social-btn:hover {
+    background-color: #323C8D;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Блок направлений подготовки */
+.stats-directions-block {
+    margin-top: 40px;
+}
+
+/* Контейнер для карточки направления */
+.stats-directions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    border: #8BA474 2px solid;
+    border-radius: 15px;
+    overflow: visible;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Карточка направления */
+.stats-direction-card {
+    padding: 20px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ВСЕ В ОДНУ ЛИНИЮ БЕЗ СКРОЛЛА */
+.stats-direction-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    min-width: min-content;
+}
+
+/* Заголовок */
+.stats-direction-title-container {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.stats-direction-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #8BA474;
+    margin: 0;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+}
+
+/* КАРТОЧКИ МЕСТ - ОДИНАКОВОЙ ВЫСОТЫ */
+.stats-place-item {
+    flex-shrink: 0;
+    width: 100px;
+    min-height: 80px; /* ФИКСИРОВАННАЯ МИНИМАЛЬНАЯ ВЫСОТА */
+    text-align: center;
+    padding: 12px 8px;
+    border: 2px solid #8BA474;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Гарантируем одинаковую высоту для всех карточек */
+.stats-place-item:nth-child(2),
+.stats-place-item:nth-child(3),
+.stats-place-item:nth-child(4),
+.stats-place-item:nth-child(5),
+.stats-place-item:nth-child(6) {
+    min-height: 80px;
+    height: auto;
+}
+
+.stats-place-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(139, 164, 116, 0.15);
+}
+
+.stats-place-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8BA474;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.stats-place-label {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.2;
+    min-height: 28px; /* ФИКСИРОВАННАЯ МИНИМАЛЬНАЯ ВЫСОТА ДЛЯ ТЕКСТА */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Стили для скроллбара если нужно */
+.stats-direction-card::-webkit-scrollbar {
+    height: 6px;
+}
+
+.stats-direction-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.stats-direction-card::-webkit-scrollbar-thumb {
+    background: #8BA474;
+    border-radius: 3px;
+}
+
+.stats-direction-card::-webkit-scrollbar-thumb:hover {
+    background: #7a945f;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    .admission-stats-section {
+        padding: 50px 15px;
+        margin: 40px 0; /* Уменьшен отступ для планшетов */
+    }
+
+    .stats-main-container,
+    .stats-directions-container {
+        padding: 0 15px;
+    }
+
+    .stats-content-wrapper {
+        gap: 30px;
+    }
+
+    .stats-grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .stats-grid-number {
+        font-size: 52px;
+    }
+
+    .stats-grid-title {
+        font-size: 18px;
+    }
+
+    .stats-social-container {
+        flex: 0 0 280px;
+    }
+
+    .stats-social-card {
+        padding: 22px;
+    }
+
+    .stats-direction-card {
+        padding: 18px 12px;
+    }
+
+    .stats-direction-title {
+        font-size: 20px;
+    }
+
+    .stats-place-item {
+        width: 95px;
+        min-height: 75px; /* Уменьшена высота для планшетов */
+        padding: 10px 6px;
+    }
+
+    .stats-place-item:nth-child(2),
+    .stats-place-item:nth-child(3),
+    .stats-place-item:nth-child(4),
+    .stats-place-item:nth-child(5),
+    .stats-place-item:nth-child(6) {
+        min-height: 75px;
+    }
+
+    .stats-place-value {
+        font-size: 22px;
+    }
+
+    .stats-place-label {
+        font-size: 11px;
+        min-height: 24px; /* Уменьшена минимальная высота для текста */
+    }
+}
+
+/* Адаптивность для небольших планшетов */
+@media (max-width: 768px) {
+    .admission-stats-section {
+        padding: 40px 15px;
+        margin: 35px 0; /* Уменьшен отступ для мобильных */
+    }
+
+    .stats-section-title {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .stats-directions-block .stats-section-title {
+        margin-top: 30px; /* Уменьшен отступ для мобильных */
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .stats-content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .stats-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .stats-grid-item {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* На мобильных цифры не подскакивают слишком высоко */
+    .stats-grid-number:hover {
+        transform: translateY(-5px);
+    }
+
+    .stats-social-container {
+        flex: none;
+        width: 100%;
+    }
+
+    .stats-social-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .stats-social-buttons {
+        justify-content: center;
+    }
+
+    /* НА МОБИЛЬНЫХ ВСЕ ЕЩЕ В КОЛОНКУ */
+    .stats-direction-card {
+        max-width: 100%;
+        padding: 20px;
+        overflow-x: visible;
+    }
+
+    .stats-direction-line {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        min-width: auto;
+    }
+
+    .stats-direction-title-container {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .stats-direction-title {
+        white-space: normal;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .stats-place-item {
+        width: 100%;
+        max-width: 200px;
+        min-height: 70px; /* Высота для мобильных */
+        padding: 12px 8px;
+    }
+
+    .stats-place-item:nth-child(2),
+    .stats-place-item:nth-child(3),
+    .stats-place-item:nth-child(4),
+    .stats-place-item:nth-child(5),
+    .stats-place-item:nth-child(6) {
+        min-height: 70px;
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .stats-place-value {
+        font-size: 24px;
+    }
+
+    .stats-place-label {
+        font-size: 12px;
+        min-height: 22px; /* Минимальная высота для мобильных */
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+    .admission-stats-section {
+        padding: 30px 10px;
+        margin: 25px 0; /* Уменьшен отступ для маленьких экранов */
+    }
+
+    .stats-section-title {
+        font-size: 22px;
+        margin-bottom: 25px; /* Уменьшен отступ снизу */
+    }
+
+    .stats-directions-block .stats-section-title {
+        margin-top: 25px; /* Уменьшен отступ для маленьких экранов */
+        margin-bottom: 20px;
+    }
+
+    .stats-grid-number {
+        font-size: 48px;
+    }
+
+    .stats-grid-title {
+        font-size: 18px;
+    }
+
+    .stats-grid-desc {
+        font-size: 13px;
+    }
+
+    .stats-social-label {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .stats-social-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .stats-direction-title {
+        font-size: 20px;
+    }
+
+    .stats-place-item {
+        min-height: 65px; /* Высота для маленьких экранов */
+    }
+
+    .stats-place-item:nth-child(2),
+    .stats-place-item:nth-child(3),
+    .stats-place-item:nth-child(4),
+    .stats-place-item:nth-child(5),
+    .stats-place-item:nth-child(6) {
+        min-height: 65px;
+    }
+
+    .stats-place-value {
+        font-size: 22px;
+    }
+
+    .stats-place-label {
+        font-size: 11px;
+        min-height: 20px; /* Минимальная высота для маленьких экранов */
+    }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 380px) {
+    .stats-section-title {
+        font-size: 20px;
+    }
+
+    .stats-grid-number {
+        font-size: 42px;
+    }
+
+    .stats-social-label {
+        font-size: 16px;
+    }
+
+    .stats-social-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .stats-direction-title {
+        font-size: 18px;
+    }
+
+    .stats-place-value {
+        font-size: 20px;
+    }
+
+    .stats-place-label {
+        font-size: 10px;
+        min-height: 18px;
+    }
+}
+
+/* Подключаем Montserrat если нет в проекте */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');

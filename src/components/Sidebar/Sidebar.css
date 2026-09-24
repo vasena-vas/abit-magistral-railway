@@ -1,0 +1,298 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    min-width: 300px; /* Добавляем минимальную ширину */
+    max-width: 300px; /* Добавляем максимальную ширину */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 1);
+    color: #333;
+    overflow-y: auto; /* Оставляем возможность скролла, но скрываем полосу */
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+    z-index: 1000;
+
+    /* Скрываем скроллбар для всех браузеров */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+}
+
+/* Скрываем скроллбар для WebKit браузеров (Chrome, Safari, Opera) */
+.sidebar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.sidebar-content {
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+}
+
+.university-logo {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #999;
+    text-align: left;
+    position: relative;
+}
+
+.logo-image {
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+/* Крестик для закрытия меню на мобильных */
+.sidebar-close {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.nav-section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #999;
+}
+
+.nav-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.nav-section h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.nav-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-section li {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: none;
+}
+
+.nav-section li:last-child {
+    border-bottom: none;
+}
+
+.nav-section li:hover {
+    transform: translateX(5px);
+}
+
+/* Стили для иконок */
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Стили для Уровень образования */
+.education-level h3 {
+    color: rgba(245, 74, 0, 1);
+}
+
+.education-level li {
+    color: rgba(245, 74, 0, 1);
+}
+
+.education-level li:hover {
+    color: rgba(245, 74, 0, 0.8);
+    background-color: rgba(245, 74, 0, 0.1);
+}
+
+/* Стили для Дополнительно */
+.additional h3 {
+    color: rgba(50, 60, 141, 1);
+}
+
+.additional li {
+    color: rgba(50, 60, 141, 1);
+}
+
+.additional li:hover {
+    color: rgba(50, 60, 141, 0.8);
+    background-color: rgba(50, 60, 141, 0.1);
+}
+
+/* Стили для Способы подачи */
+.submission-methods h3 {
+    color: rgba(139, 164, 116, 1);
+}
+
+.submission-methods li {
+    color: rgba(139, 164, 116, 1);
+}
+
+.submission-methods li:hover {
+    color: rgba(139, 164, 116, 0.8);
+    background-color: rgba(139, 164, 116, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 280px;
+        min-width: 280px; /* Обновляем для планшетов */
+        max-width: 280px;
+    }
+
+    .logo-image {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        min-width: auto; /* На мобильных снимаем фиксированную ширину */
+        max-width: 300px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+
+        /* Скрываем скроллбар для мобильной версии тоже */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-content {
+        padding: 1rem;
+    }
+
+    .logo-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nav-section {
+        padding-bottom: 1.2rem;
+    }
+
+    .sidebar-nav {
+        gap: 1.2rem;
+    }
+
+    /* Показываем крестик на мобильных */
+    .sidebar-close {
+        display: block;
+        top: 10px;
+        right: 10px;
+        font-size: 28px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .sidebar-close:hover {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Отступ для лого, чтобы не наезжал на крестик */
+    .university-logo {
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .sidebar-content {
+        padding: 0.8rem;
+    }
+
+    .nav-section li {
+        font-size: 13px;
+        padding: 0.4rem 0;
+        gap: 10px;
+    }
+
+    .nav-section h3 {
+        font-size: 1rem;
+        margin: 0 0 0.6rem 0;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-section {
+        padding-bottom: 1rem;
+    }
+
+    .sidebar-nav {
+        gap: 1rem;
+    }
+
+    .university-logo {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .sidebar-close {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+    }
+}

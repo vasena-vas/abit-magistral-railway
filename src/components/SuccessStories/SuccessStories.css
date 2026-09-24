@@ -1,0 +1,286 @@
+/* Success Stories Styles */
+.success-stories {
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.success-stories h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: left;
+    border: none;
+    padding: 0 0 0 5%;
+    margin-top: 60px;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Фиксируем 3 колонки */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.story-card {
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+}
+
+.story-card.orange {
+    border-color: rgba(245, 74, 0, 1);
+}
+
+.story-card.blue {
+    border-color: rgba(50, 60, 141, 1);
+}
+
+.story-card.green {
+    border-color: rgba(139, 164, 116, 1);
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-placeholder {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.photo-frame {
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.story-card.orange .photo-frame {
+    border-color: rgba(245, 74, 0, 1);
+}
+
+.story-card.blue .photo-frame {
+    border-color: rgba(50, 60, 141, 1);
+}
+
+.story-card.green .photo-frame {
+    border-color: rgba(139, 164, 116, 1);
+}
+
+.photo-text {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.story-card.orange .photo-text {
+    color: rgba(245, 74, 0, 1);
+}
+
+.story-card.blue .photo-text {
+    color: rgba(50, 60, 141, 1);
+}
+
+.story-card.green .photo-text {
+    color: rgba(139, 164, 116, 1);
+}
+
+.story-content {
+    padding: 25px 30px 35px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.story-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+}
+
+.story-card.orange .story-name {
+    color: rgba(245, 74, 0, 1);
+}
+
+.story-card.blue .story-name {
+    color: rgba(50, 60, 141, 1);
+}
+
+.story-card.green .story-name {
+    color: rgba(139, 164, 116, 1);
+}
+
+.story-age {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    font-style: normal;
+}
+
+.story-card.orange .story-age {
+    color: rgba(245, 74, 0, 1);
+}
+
+.story-card.blue .story-age {
+    color: rgba(50, 60, 141, 1);
+}
+
+.story-card.green .story-age {
+    color: rgba(139, 164, 116, 1);
+}
+
+.position {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    color: #7f8c8d;
+}
+
+.company {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    color: #7f8c8d;
+}
+
+.graduation {
+    font-size: 14px;
+    margin: 0 0 0 0;
+    color: #7f8c8d;
+    font-style: normal;
+}
+
+.story-spacer {
+    margin: 15px 0;
+}
+
+.story-text {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    color: #7f8c8d;
+    flex: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .stories-grid {
+        grid-template-columns: repeat(3, 1fr); /* Все еще 3 колонки */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stories-grid {
+        grid-template-columns: repeat(3, 1fr); /* Все еще 3 колонки */
+        gap: 15px;
+    }
+
+    .story-content {
+        padding: 20px 15px 25px 15px;
+    }
+
+    .story-name,
+    .story-age {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для планшетов */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .success-stories {
+        margin-bottom: 40px;
+    }
+
+    .success-stories h1 {
+        font-size: 22px;
+        margin-bottom: 30px;
+        padding: 0 0 0 5%;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr; /* 1 колонка для мобильных */
+        gap: 20px;
+    }
+
+    .story-card {
+        min-height: 480px;
+        border-radius: 15px;
+    }
+
+    .photo-placeholder {
+        height: 100px;
+        padding: 20px;
+    }
+
+    .photo-frame {
+        width: 70px;
+        height: 70px;
+    }
+
+    .story-content {
+        padding: 20px 22px 25px 22px;
+    }
+
+    .story-name {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-card {
+        min-height: 460px;
+        margin: 0;
+    }
+
+    .photo-placeholder {
+        height: 90px;
+        padding: 18px;
+    }
+
+    .photo-frame {
+        width: 65px;
+        height: 65px;
+    }
+
+    .story-content {
+        padding: 18px 20px 22px 20px;
+    }
+
+    .story-name {
+        font-size: 16px;
+    }
+
+    .position,
+    .company,
+    .graduation,
+    .story-text {
+        font-size: 13px;
+    }
+}

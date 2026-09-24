@@ -1,0 +1,236 @@
+/* Contact Form Styles */
+.contact-container {
+    margin: 40px 0;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.contact-header h2 {
+    font-size: 24px; /* Уменьшенный размер */
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.contact-header p {
+    font-size: 18px; /* Уменьшенный размер */
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.contact-section h3 {
+    font-size: 20px;
+    color: #718c59;
+    margin-bottom: 25px;
+    text-align: left;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.form-main-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 0;
+    min-width: 150px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #8ba474;
+    border-radius: 25px; /* Более скругленные инпуты */
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #718c59;
+    box-shadow: 0 0 0 2px rgba(139, 164, 116, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #7f8c8d;
+}
+
+.submit-btn, .whatsapp-btn, .telegram-btn {
+    background-color: #718c59;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px; /* Кнопки остаются с меньшим скруглением */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.submit-btn:hover, .whatsapp-btn:hover, .telegram-btn:hover {
+    background-color: #5d7745;
+}
+
+.form-checkboxes {
+    margin-top: 25px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center; /* Выравнивание по центру вертикально */
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.4;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+}
+
+.checkbox-text {
+    display: flex;
+    align-items: center; /* Текст по центру относительно чекбокса */
+    min-height: 22px; /* Минимальная высота как у чекбокса */
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Центрирование чекбокса */
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    border: 2px solid #718c59;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.checkbox-label:hover input ~ .checkmark {
+    border-color:#718c59;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+    background-color: #718c59;
+    border-color: #718c59;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .form-main-row {
+        gap: 12px;
+    }
+
+    .form-group {
+        min-width: 120px;
+    }
+
+    .submit-btn, .whatsapp-btn, .telegram-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 20px 0;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-header h2 {
+        font-size: 24px;
+    }
+
+    .form-main-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input {
+        border-radius: 8px; /* На мобильных меньше скругление */
+    }
+
+    .submit-btn, .whatsapp-btn, .telegram-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+        padding-left: 30px;
+        align-items: flex-start; /* На мобильных выравнивание по верху */
+    }
+
+    .checkmark {
+        top: 10px; /* Позиционирование для мобильных */
+        transform: none;
+    }
+
+    .checkbox-text {
+        align-items: flex-start;
+        padding-top: 2px;
+    }
+}

@@ -1,0 +1,209 @@
+/* Professions.css */
+
+.professions-section {
+    margin: 60px 0;
+    padding: 0 20px;
+}
+
+.professions-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: left;
+    border: none;
+    padding: 0 0 0 5%;
+}
+
+.professions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Общие стили для карточек */
+.profession-card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 110px; /* Уменьшили минимальную высоту */
+}
+
+.profession-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Первая карточка */
+.profession-card:nth-child(1) {
+    background-color: #F8F9F7;
+    border-color: #8BA474;
+}
+
+.profession-card:nth-child(1) h3 {
+    color: #8BA474;
+}
+
+/* Вторая карточка */
+.profession-card:nth-child(2) {
+    background-color: #F4F4F8;
+    border-color: #323C8D;
+}
+
+.profession-card:nth-child(2) h3 {
+    color: #323C8D;
+}
+
+/* Третья карточка */
+.profession-card:nth-child(3) {
+    background-color: #FFF7ED;
+    border-color: #F54A00;
+}
+
+.profession-card:nth-child(3) h3 {
+    color: #F54A00;
+}
+
+/* Четвертая карточка */
+.profession-card:nth-child(4) {
+    background-color: #F5F5F5;
+    border-color: #B7B7B7;
+}
+
+.profession-card:nth-child(4) h3 {
+    color: #666666;
+}
+
+/* Убираем иконки */
+.profession-icon {
+    display: none;
+}
+
+.profession-card h3 {
+    font-size: 18px; /* Уменьшили шрифт */
+    font-weight: 700;
+    margin-bottom: 8px; /* Уменьшили отступ */
+    line-height: 1.3;
+    text-align: left;
+    flex: 0 0 auto;
+}
+
+.salary {
+    font-size: 14px; /* Уменьшили шрифт */
+    font-weight: 600;
+    color: #666666;
+    margin-bottom: 5px; /* Уменьшили отступ */
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+    flex: 0 0 auto;
+}
+
+.workplace {
+    font-size: 14px; /* Уменьшили шрифт */
+    color: #666666;
+    line-height: 1.3;
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0;
+    display: block;
+    font-weight: 400;
+    flex: 0 0 auto;
+}
+
+/* Добавляем гибкий элемент для выравнивания */
+.profession-card::after {
+    content: '';
+    flex: 1;
+    min-height: 0;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .professions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .profession-card {
+        padding: 18px;
+        min-height: 100px;
+    }
+
+    .profession-card h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .salary {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .workplace {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .professions-section {
+        margin: 40px 0;
+    }
+
+    .profession-card {
+        padding: 16px;
+        min-height: 95px;
+    }
+
+    .profession-card h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .salary {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+
+    .workplace {
+        font-size: 13px;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+    .professions-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 400px;
+    }
+
+    .profession-card {
+        padding: 15px;
+        min-height: 90px;
+    }
+
+    .profession-card h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .salary {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+
+    .workplace {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,244 @@
+/* ProgramPartners.css */
+
+/* Стили для блока партнеров - фон как в картинке */
+.partners-section {
+    margin: 50px 0 30px 0;
+    position: relative;
+    background-color: transparent;
+    overflow: visible;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+}
+
+/* Разделительная линия сверху */
+
+
+/* Контейнер для всего контента */
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    border:#8BA474 2px solid ;
+    border-radius: 15px;
+}
+
+/* Заголовок и обертка карусели в одной строке */
+.partners-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    gap: 20px;
+
+
+}
+
+/* Заголовок "Партнёры программы:" - цвет #8BA474 */
+.partners-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #8BA474;
+    margin: 0;
+    position: relative;
+    z-index: 4;
+    background-color: white;
+    padding-right: 30px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Обертка для бегущей строки */
+.partners-carousel-wrapper {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    height: 100px;
+}
+
+/* Градиенты для растушевания по краям */
+.fade-overlay-left,
+.fade-overlay-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.fade-overlay-left {
+    left: 0;
+    background: linear-gradient(90deg, white 0%, transparent 100%);
+}
+
+.fade-overlay-right {
+    right: 0;
+    background: linear-gradient(90deg, transparent 0%, white 100%);
+}
+
+/* Карусель с логотипами */
+.partners-carousel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Дорожка для бесконечной прокрутки */
+.partners-track {
+    display: flex;
+    align-items: center;
+    animation: scrollPartners 30s linear infinite;
+    will-change: transform;
+    gap: 0; /* Убираем gap для равномерной прокрутки */
+}
+
+/* Логотипы партнеров */
+.partner-logo {
+    height:45px;
+    width: auto;
+    margin: 0 40px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    filter: grayscale(30%);
+}
+
+/* Эффекты при наведении */
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Дополнительные карточки для дублирования (скрытые) */
+.partner-item {
+    display: none; /* Скрываем старые карточки */
+}
+
+/* Разделительная линия снизу */
+.bottom-divider {
+    height: 2px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 30px auto 0 auto;
+    background: linear-gradient(
+            90deg,
+            transparent 0%,
+            #8BA474 20%,
+            #8BA474 80%,
+            transparent 100%
+    );
+    border: none;
+}
+
+/* Анимация прокрутки */
+@keyframes scrollPartners {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Пауза при наведении */
+.partners-carousel-wrapper:hover .partners-track {
+    animation-play-state: paused;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 992px) {
+    .partners-container {
+        padding: 0 30px;
+    }
+
+    .partners-title {
+        font-size: 30px;
+    }
+
+    .partner-logo {
+        height: 50px;
+        margin: 0 30px;
+    }
+
+    .fade-overlay-left,
+    .fade-overlay-right {
+        width: 120px;
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .partners-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    .partners-title {
+        font-size: 26px;
+        white-space: normal;
+        padding-right: 0;
+        background-color: transparent;
+    }
+
+    .partners-carousel-wrapper {
+        height: 80px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .fade-overlay-left,
+    .fade-overlay-right {
+        width: 80px;
+    }
+
+    .section-divider,
+    .bottom-divider {
+        margin: 20px auto;
+    }
+}
+
+/* Адаптация для маленьких мобильных */
+@media (max-width: 480px) {
+    .partners-container {
+        padding: 0 20px;
+    }
+
+    .partners-section {
+        margin: 40px 0 20px 0;
+    }
+
+    .partners-title {
+        font-size: 22px;
+    }
+
+    .partner-logo {
+        height: 40px;
+        margin: 0 20px;
+    }
+
+    .fade-overlay-left,
+    .fade-overlay-right {
+        width: 60px;
+    }
+
+    .section-divider,
+    .bottom-divider {
+        margin: 15px auto;
+        height: 1.5px;
+    }
+
+    .partners-carousel-wrapper {
+        height: 60px;
+    }
+}

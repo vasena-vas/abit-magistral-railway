@@ -1,0 +1,113 @@
+/* App.css */
+/* Добавьте в index.css или App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+/* Основные стили layout */
+.App {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+  width: 100%;
+  overflow-x: hidden; /* Блокировка горизонтального скролла */
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* Блокировка горизонтального скролла */
+  transition: all 0.3s ease;
+}
+
+.content {
+  flex: 1;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box; /* Важно: padding не увеличивает ширину */
+}
+
+/* Блокировка горизонтального скролла для всего документа */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Стили для оверлея меню */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .main-content.menu-open {
+    position: fixed;
+    width: 100%;
+    filter: blur(2px);
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0 0.8rem;
+  }
+}
+
+/* Дополнительная страховка для всех элементов */
+* {
+  box-sizing: border-box; /* Все элементы учитывают padding в ширине */
+}
+
+/* Если нужна дополнительная защита для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}

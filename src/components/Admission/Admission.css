@@ -1,0 +1,646 @@
+/* Admission Calculator Styles */
+.admission-section {
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.calculator-card {
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid;
+}
+
+.calculator-card.blue {
+    border-color: rgba(50, 60, 141, 1);
+    background-color: rgba(244, 244, 248, 1);
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.calculator-card h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgba(50, 60, 141, 1);
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.subject-card {
+    border: 2px solid rgba(50, 60, 141, 1);
+    border-radius: 10px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    min-height: 60px;
+}
+
+.subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(50, 60, 141, 0.2);
+}
+
+/* Стиль для зеленой карточки */
+.subject-card.green {
+    border-color: rgba(139, 164, 116, 1);
+}
+
+.subject-card.green:hover {
+    box-shadow: 0 3px 10px rgba(139, 164, 116, 0.2);
+}
+
+.subject-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    text-align: left;
+}
+
+/* Контейнер для заголовка с вопросиком */
+.subject-title-with-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.subject-name {
+    font-weight: bold;
+    color: rgba(50, 60, 141, 1);
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* Цвет названия предмета для зеленой карточки */
+.subject-card.green .subject-name {
+    color: rgba(139, 164, 116, 1);
+}
+
+/* ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ МИНИМАЛЬНОГО БАЛЛА */
+.min-score-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.min-score-label {
+    color: #5d6d7e;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.min-score-value {
+    color: rgba(231, 76, 60, 1); /* Красный цвет для акцента */
+    font-size: 12px;
+    font-weight: 800; /* Очень жирный */
+    padding: 1px 4px;
+    border-radius: 3px;
+    background-color: rgba(231, 76, 60, 0.1);
+    display: inline-block;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    animation: highlight-pulse 3s ease-in-out infinite;
+}
+
+/* Для зеленой карточки используем зеленый цвет */
+.subject-card.green .min-score-value {
+    color: rgba(139, 164, 116, 1);
+    background-color: rgba(139, 164, 116, 0.1);
+    font-weight: 800;
+}
+
+@keyframes highlight-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.2);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+    }
+}
+
+.score-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.score-input {
+    width: 45px;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.score-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.score-input::placeholder {
+    color: #bdc3c7;
+}
+
+/* Цвет рамки при фокусе для зеленой карточки */
+.subject-card.green .score-input:focus {
+    outline: 2px solid rgba(139, 164, 116, 0.5);
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(50, 60, 141, 0.3);
+    margin: 25px 0;
+    width: 100%;
+}
+
+.results-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.results-horizontal-line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.result-combined {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.result-label {
+    font-size: 16px;
+    color: rgba(50, 60, 141, 1);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(50, 60, 141, 1);
+    white-space: nowrap;
+}
+
+.result-percentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(50, 60, 141, 1);
+    white-space: nowrap;
+}
+
+.result-chance {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(50, 60, 141, 1);
+    white-space: nowrap;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.apply-now-btn, .ask-question-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.apply-now-btn {
+    background-color: rgba(50, 60, 141, 1);
+    color: white;
+}
+
+.apply-now-btn:hover {
+    background-color: rgba(40, 48, 120, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(50, 60, 141, 0.3);
+}
+
+.ask-question-btn {
+    background-color: white;
+    color: rgba(50, 60, 141, 1);
+    border: 2px solid rgba(50, 60, 141, 1);
+}
+
+.ask-question-btn:hover {
+    background-color: rgba(50, 60, 141, 1);
+    color: white;
+    border-color: rgba(50, 60, 141, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(50, 60, 141, 0.3);
+}
+
+.apply-now-btn:active,
+.ask-question-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(50, 60, 141, 0.2);
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+    color: #e74c3c;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 2px;
+    display: block;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.score-input.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    animation: pulse-error 0.5s ease;
+}
+
+@keyframes pulse-error {
+    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+    70% { box-shadow: 0 0 0 3px rgba(231, 76, 60, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+.score-input:valid {
+    animation: pulse-valid 0.3s ease;
+}
+
+@keyframes pulse-valid {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.score-input:focus {
+    outline: 2px solid rgba(50, 60, 141, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.subject-card:hover .min-score-label {
+    color: rgba(50, 60, 141, 0.8);
+}
+
+.subject-card.green:hover .min-score-label {
+    color: rgba(139, 164, 116, 0.8);
+}
+
+.score-input-wrapper {
+    position: relative;
+}
+
+.score-input-wrapper::after {
+    content: 'Макс: 100';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 10px;
+    color: #7f8c8d;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #ecf0f1;
+    white-space: nowrap;
+}
+
+.score-input-wrapper:hover::after {
+    opacity: 1;
+}
+
+.subject-card:last-child .score-input-wrapper::after {
+    content: 'Макс: 10';
+}
+
+/* Стили для вопросительных значков */
+.question-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: help;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 50;
+}
+
+.hint-green {
+    background-color: rgba(139, 164, 116, 1);
+}
+
+.hint-green:hover {
+    background-color: rgba(111, 138, 91, 1);
+}
+
+/* ПОДСКАЗКА ДЛЯ ВОПРОСИКА - ОБНОВЛЕННАЯ */
+.question-icon[data-tooltip] {
+    position: relative;
+}
+
+.question-icon[data-tooltip]:hover::before,
+.question-icon[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Подсказка - вытянутая в высоту и узкая */
+.question-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #F8F9F7; /* Светло-зеленый фон */
+    border: 2px solid rgba(139, 164, 116, 1);
+    border-radius: 8px;
+    padding: 12px 14px;
+    max-width: 220px; /* Уменьшили ширину */
+    min-width: 140px; /* Уменьшили минимальную ширину */
+    width: max-content;
+    max-height: 180px; /* Ограничили высоту */
+    overflow-y: auto; /* Добавили прокрутку если контент не помещается */
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.5; /* Увеличили межстрочный интервал для удобочитаемости */
+    color: #2c3e50;
+    text-align: left;
+    font-weight: 400;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Улучшаем вертикальное расположение */
+    top: auto; /* Убедимся, что top не установлен */
+    bottom: calc(100% + 15px);
+    margin-left: -320%;
+}
+
+/* Зеленая стрелочка подсказки */
+.question-icon[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(139, 164, 116, 1);
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admission-section {
+        margin-bottom: 40px;
+    }
+
+    .calculator-card {
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .calculator-card h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .subject-card {
+        padding: 10px 12px;
+        min-height: 55px;
+    }
+
+    /* Адаптация минимального балла для планшетов */
+    .min-score-label {
+        font-size: 10px;
+    }
+
+    .min-score-value {
+        font-size: 11px;
+        padding: 1px 3px;
+    }
+
+    .result-combined {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .result-value,
+    .result-percentage {
+        font-size: 22px;
+    }
+
+    .result-chance {
+        font-size: 18px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .apply-now-btn, .ask-question-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .error-message {
+        font-size: 10px;
+    }
+
+    .score-input-wrapper::after {
+        font-size: 9px;
+        top: -18px;
+    }
+
+    /* Подсказки для планшетов - еще уже */
+    .question-icon[data-tooltip]::after {
+        max-width: 180px; /* Уменьшили еще больше */
+        min-width: 120px; /* Уменьшили минимальную ширину */
+        padding: 10px 12px;
+        font-size: 12px;
+        max-height: 150px; /* Уменьшили высоту для планшетов */
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 20px;
+    }
+
+    .calculator-card h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .subject-card {
+        padding: 8px 10px;
+        min-height: 50px;
+    }
+
+    .subject-name {
+        font-size: 12px;
+    }
+
+    /* Адаптация минимального балла для мобильных */
+    .min-score-container {
+        gap: 4px;
+    }
+
+    .min-score-label {
+        font-size: 9px;
+    }
+
+    .min-score-value {
+        font-size: 10px;
+        font-weight: 900;
+        padding: 0 2px;
+    }
+
+    .score-input {
+        width: 40px;
+        padding: 5px 6px;
+        font-size: 12px;
+    }
+
+    .result-label {
+        font-size: 14px;
+    }
+
+    .result-value,
+    .result-percentage {
+        font-size: 20px;
+    }
+
+    .result-chance {
+        font-size: 16px;
+    }
+
+    .apply-now-btn, .ask-question-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .error-message {
+        font-size: 9px;
+    }
+
+    .score-input-wrapper::after {
+        font-size: 8px;
+        top: -16px;
+    }
+
+    /* Подсказки для мобильных - максимально узкие */
+    .question-icon[data-tooltip]::after {
+        max-width: 160px; /* Еще уже для мобильных */
+        min-width: 100px;
+        padding: 8px 10px;
+        font-size: 11px;
+        max-height: 130px; /* Уменьшили высоту для мобильных */
+        bottom: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(160px, calc(100vw - 40px));
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 4px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 380px) {
+    /* Подсказки для очень маленьких экранов - максимально компактные */
+    .question-icon[data-tooltip]::after {
+        max-width: 140px;
+        min-width: 90px;
+        padding: 6px 8px;
+        font-size: 10px;
+        max-height: 120px; /* Еще меньше высота */
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(140px, calc(100vw - 20px));
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid rgba(139, 164, 116, 1);
+    }
+}

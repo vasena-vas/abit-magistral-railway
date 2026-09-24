@@ -1,0 +1,1116 @@
+.admission-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    margin: -60px 0;
+    overflow: visible !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: visible !important;
+}
+
+/* Обертка для заголовка и кнопок */
+.admission-header-wrapper {
+    margin-bottom: 20px; /* Уменьшили с 40px на 20px */
+    overflow: visible !important;
+}
+
+/* Заголовок и кнопки */
+.admission-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; /* Уменьшили с 30px на 15px */
+    flex-wrap: wrap;
+    overflow: visible !important;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    border: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Кнопки переключения */
+.tabs-container {
+    display: flex;
+    gap: 15px;
+}
+
+.tab-button {
+    padding: 8px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #323C8D;
+    background-color: #FFFFFF;
+    border: 2px solid #323C8D;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+}
+
+.tab-button:hover {
+    background-color: #f0f2ff;
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background-color: #323C8D;
+    color: #FFFFFF;
+    border-color: #323C8D;
+}
+
+.tab-button.active:hover {
+    background-color: #2a347a;
+    transform: translateY(-2px);
+}
+
+/* Основная сетка блоков */
+.admission-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: start;
+    overflow: visible !important;
+}
+
+/* Левая колонка: формы обучения */
+.forms-column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    overflow: visible !important;
+}
+
+/* Общие стили карточек */
+.form-card {
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    min-height: 170px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    overflow: visible !important;
+}
+
+.form-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Очная форма */
+.form-card.full-time {
+    border-color: #8BA474;
+}
+
+.form-card.full-time .form-title {
+    color: #8BA474;
+}
+
+.form-card.full-time .stat-item {
+    border-color: #8BA474;
+}
+
+.form-card.full-time .stat-number {
+    color: #8BA474;
+}
+
+/* Заочная форма */
+.form-card.part-time {
+    border-color: #323C8D;
+}
+
+.form-card.part-time .form-title {
+    color: #323C8D;
+}
+
+.form-card.part-time .stat-item {
+    border-color: #323C8D;
+}
+
+.form-card.part-time .stat-number {
+    color: #323C8D;
+}
+
+/* Заголовок карточки */
+.form-header {
+    margin-bottom: 15px;
+    overflow: visible !important;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: #716e6e;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Статистика в одну строку */
+.form-stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 5px;
+    border: 1px solid;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.stat-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+/* Стиль для стоимости с тултипом */
+.stat-number.cost-with-tooltip {
+    cursor: help;
+    position: relative;
+    display: inline-block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color:#716e6e;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Правая колонка: требования к ЕГЭ */
+.requirements-column {
+    height: 100%;
+    overflow: visible !important;
+}
+
+.requirements-card {
+    background-color: #FFFFFF;
+    border: 2px solid #F54A00;
+    border-radius: 12px;
+    padding: 20px;
+    height: auto;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    min-height: 140px;
+    overflow: visible !important;
+}
+
+.requirements-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245, 74, 0, 0.1);
+}
+
+.requirements-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F54A00;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.requirements-list {
+    margin-bottom: 10px;
+}
+
+.requirement-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 8px 0;
+}
+
+.requirement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.subject {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    flex: 1;
+}
+
+/* Мини-карточки с баллами */
+.min-score-card {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 15px;
+    white-space: nowrap;
+    margin-left: 8px;
+    border: 1px solid;
+    text-align: center;
+    min-width: 90px;
+    transition: all 0.3s ease;
+}
+
+.min-score-card:hover {
+    transform: scale(1.03);
+}
+
+.min-score-card.score-0 {
+    color: #F54A00;
+    background-color: #FFF7ED;
+    border-color: #F54A00;
+}
+
+.min-score-card.score-1 {
+    color: #323C8D;
+    background-color: #F4F4F8;
+    border-color: #323C8D;
+}
+
+.min-score-card.score-2 {
+    color: #8BA474;
+    background-color: #F8F9F7;
+    border-color: #8BA474;
+}
+
+/* Блок "Важно" */
+.important-note {
+    background-color: #FFF7ED;
+    border: 1px solid #F54A00;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.note-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F54A00;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.note-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.note-text {
+    font-size: 12px;
+    color: #2c3e50;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.note-highlight {
+    font-size: 13px;
+    font-weight: 700;
+    color: #F54A00;
+    line-height: 1.3;
+    margin: 5px;
+}
+
+/* Стили для вопросительных значков */
+.question-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: help;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 50;
+}
+
+/* Вопросик перед "Поступление по:" */
+.header-question {
+    background-color: #323C8D;
+    margin-right: 12px;
+}
+
+.header-question:hover {
+    background-color: #2a347a;
+}
+
+/* Вопросик для очной формы */
+.full-time-question {
+    background-color: #8BA474;
+    margin-left: 10px;
+}
+
+.full-time-question:hover {
+    background-color: #6f8a5b;
+}
+
+/* Вопросик для заочной формы */
+.part-time-question {
+    background-color: #323C8D;
+    margin-left: 10px;
+}
+
+.part-time-question:hover {
+    background-color: #2a347a;
+}
+
+/* Обертка заголовка с иконкой */
+.title-with-tooltip {
+    display: flex;
+    align-items: center;
+    overflow: visible !important;
+    position: relative;
+}
+
+/* Обертка для заголовков в карточках */
+.form-title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: visible !important;
+    position: relative;
+}
+
+/* ПОДСКАЗКА ЧЕРЕЗ ПСЕВДОЭЛЕМЕНТЫ */
+.question-icon[data-tooltip] {
+    position: relative;
+}
+
+.question-icon[data-tooltip]:hover::before,
+.question-icon[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Подсказка */
+.question-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 0;
+    transform: translateY(10px);
+    background: white;
+    border: 2px solid #323C8D;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 280px;
+    width: max-content;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c3e50;
+    text-align: left;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Стрелочка подсказки */
+.question-icon[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 10px;
+    transform: translateX(0);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #323C8D;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Для оранжевых подсказок */
+.full-time-question[data-tooltip]::after {
+    border-color: #8BA474;
+}
+
+.full-time-question[data-tooltip]::before {
+    border-top-color: #8BA474;
+}
+
+/* Для синих подсказок */
+.part-time-question[data-tooltip]::after {
+    border-color: #323C8D;
+}
+
+.part-time-question[data-tooltip]::before {
+    border-top-color: #323C8D;
+}
+
+/* ТУЛТИПЫ ДЛЯ СТОИМОСТИ */
+.cost-with-tooltip[data-tooltip] {
+    position: relative;
+}
+
+.cost-with-tooltip[data-tooltip]:hover::before,
+.cost-with-tooltip[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Подсказка для стоимости */
+.cost-with-tooltip[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border: 2px solid #8BA474;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 280px;
+    width: max-content;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Стрелочка подсказки стоимости */
+.cost-with-tooltip[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #8BA474;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Для заочной формы */
+.part-time .cost-with-tooltip[data-tooltip]::after {
+    border-color: #323C8D;
+}
+
+.part-time .cost-with-tooltip[data-tooltip]::before {
+    border-top-color: #323C8D;
+}
+
+/* Кнопки "совсем скоро..." */
+.disabled-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: not-allowed;
+    margin-top: 15px;
+    border: 1px solid;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Убираем старую систему подсказок */
+.tooltip {
+    display: none !important;
+}
+
+.tooltip-content {
+    display: none !important;
+}
+
+.tooltip-arrow {
+    display: none !important;
+}
+
+/* СТИЛИ ДЛЯ ВОСКЛИЦАТЕЛЬНОГО ЗНАКА В СТОИМОСТИ */
+.exclamation-icon {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: help;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 10;
+    animation: pulse-exclamation 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-exclamation {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+    }
+}
+
+.exclamation-icon:hover {
+    animation: none;
+    transform: scale(1.2);
+}
+
+/* Цвет для очной формы */
+.full-time .exclamation-icon {
+    background-color: #8BA474;
+}
+
+.full-time .exclamation-icon:hover {
+    background-color: #6f8a5b;
+}
+
+/* Цвет для заочной формы */
+.part-time .exclamation-icon {
+    background-color: #323C8D;
+}
+
+.part-time .exclamation-icon:hover {
+    background-color: #2a347a;
+}
+
+/* Обертка для стоимости с иконкой */
+.cost-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* ТУЛТИПЫ ДЛЯ ВОСКЛИЦАТЕЛЬНОГО ЗНАКА */
+
+.exclamation-icon[data-tooltip]:hover::before,
+.exclamation-icon[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Подсказка для восклицательного знака */
+.exclamation-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 280px;
+    width: max-content;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Стрелочка подсказки восклицательного знака */
+.exclamation-icon[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Цвет для очной формы */
+.full-time .exclamation-icon[data-tooltip]::after {
+    border-color: #8BA474;
+}
+
+.full-time .exclamation-icon[data-tooltip]::before {
+    border-top-color: #8BA474;
+}
+
+/* Цвет для заочной формы */
+.part-time .exclamation-icon[data-tooltip]::after {
+    border-color: #323C8D;
+}
+
+.part-time .exclamation-icon[data-tooltip]::before {
+    border-top-color: #323C8D;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Планшеты (992px и меньше) */
+@media (max-width: 992px) {
+    .admission-section {
+        padding: 50px 15px;
+        margin: 50px 0;
+    }
+
+    .admission-grid {
+        gap: 25px;
+    }
+
+    .form-card,
+    .requirements-card {
+        padding: 18px;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    .requirements-title {
+        font-size: 18px;
+    }
+
+    .stat-number {
+        font-size: 18px;
+    }
+
+    .min-score-card {
+        font-size: 11px;
+        padding: 3px 8px;
+        min-width: 80px;
+    }
+
+    .note-text {
+        font-size: 11px;
+    }
+
+    .note-highlight {
+        font-size: 12px;
+    }
+}
+
+/* Небольшие планшеты (768px и меньше) */
+@media (max-width: 768px) {
+    .admission-section {
+        padding: 40px 15px;
+        margin: 40px 0;
+    }
+
+    .admission-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Уменьшили с 20px на 15px */
+    }
+
+    .section-title {
+        font-size: 22px;
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title-with-tooltip {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tabs-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab-button {
+        flex: 1;
+        min-width: auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .admission-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .forms-column {
+        gap: 20px;
+    }
+
+    .form-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .requirements-card {
+        min-height: auto;
+    }
+
+    .form-stats-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .requirement-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 8px;
+    }
+
+    .min-score-card {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    /* Адаптивность иконок */
+    .question-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+    .exclamation-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+        top: -6px;
+        right: -6px;
+    }
+
+    /* Адаптивность тултипов - ИСПРАВЛЕНИЕ ДЛЯ ВОСКЛИЦАТЕЛЬНЫХ ЗНАКОВ */
+    .question-icon[data-tooltip]::after,
+    .cost-with-tooltip[data-tooltip]::after,
+    .exclamation-icon[data-tooltip]::after {
+        max-width: 240px;
+        padding: 10px 14px;
+        font-size: 12px;
+        /* Добавляем ограничения для адаптива */
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) translateY(10px);
+        /* Предотвращаем выход за границы экрана */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    /* Исправление для восклицательных знаков в адаптиве */
+    .exclamation-icon[data-tooltip]::after {
+        /* Сдвигаем подсказку выше и центрируем */
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .exclamation-icon[data-tooltip]::before {
+        bottom: calc(100% + 2px);
+    }
+}
+
+/* Мобильные устройства (576px и меньше) */
+@media (max-width: 576px) {
+    .admission-section {
+        padding: 30px 10px;
+        margin: 30px 0;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .tab-button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .form-card,
+    .requirements-card {
+        padding: 16px;
+    }
+
+    .form-title {
+        font-size: 17px;
+    }
+
+    .requirements-title {
+        font-size: 17px;
+    }
+
+    .stat-number {
+        font-size: 16px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .subject {
+        font-size: 13px;
+    }
+
+    .min-score-card {
+        font-size: 10px;
+        padding: 3px 8px;
+        min-width: 70px;
+    }
+
+    .note-label {
+        font-size: 16px;
+    }
+
+    .note-text {
+        font-size: 11px;
+    }
+
+    .note-highlight {
+        font-size: 12px;
+    }
+
+    .form-title-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .full-time-question,
+    .part-time-question {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    /* Адаптивность иконок */
+    .question-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+    }
+
+    .exclamation-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        top: -5px;
+        right: -5px;
+        left: 80%;
+    }
+
+    /* Адаптивность тултипов - ДОПОЛНИТЕЛЬНЫЕ ИСПРАВЛЕНИЯ ДЛЯ МОБИЛЬНЫХ */
+    .question-icon[data-tooltip]::after,
+    .cost-with-tooltip[data-tooltip]::after,
+    .exclamation-icon[data-tooltip]::after {
+        max-width: 200px;
+        padding: 8px 12px;
+        font-size: 11px;
+        /* Гарантируем центрирование на маленьких экранах */
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) translateY(0) !important;
+        /* Уменьшаем отступ */
+        bottom: calc(100% + 8px);
+    }
+
+    /* Исправляем положение подсказок для восклицательных знаков */
+    .exclamation-icon[data-tooltip]::after {
+        width: 180px;
+        max-width: 90vw;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) translateY(0) !important;
+        bottom: calc(100% + 8px);
+    }
+
+    .exclamation-icon[data-tooltip]::before {
+        bottom: calc(100% + 0px);
+    }
+
+    /* Для вопросительных знаков в заголовках */
+    .header-question[data-tooltip]::after {
+        left: 0 !important;
+        transform: translateX(0) translateY(0) !important;
+        bottom: calc(100% + 8px);
+    }
+
+    .header-question[data-tooltip]::before {
+        left: 10px;
+    }
+
+    /* Для вопросительных знаков в карточках */
+    .full-time-question[data-tooltip]::after,
+    .part-time-question[data-tooltip]::after {
+        left: 0 !important;
+        transform: translateX(0) translateY(0) !important;
+        bottom: calc(100% + 8px);
+    }
+
+    .full-time-question[data-tooltip]::before,
+    .part-time-question[data-tooltip]::before {
+        left: 10px;
+    }
+}
+
+/* Очень маленькие экраны (380px и меньше) */
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 18px;
+    }
+
+    .tab-button {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: auto;
+    }
+
+    .form-title {
+        font-size: 16px;
+    }
+
+    .requirements-title {
+        font-size: 16px;
+    }
+
+    .stat-number {
+        font-size: 15px;
+    }
+
+    .subject {
+        font-size: 12px;
+    }
+
+    .min-score-card {
+        font-size: 9px;
+        padding: 2px 6px;
+        min-width: 60px;
+    }
+
+    .note-label {
+        font-size: 14px;
+    }
+
+    /* Адаптивность иконок */
+    .question-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+    }
+
+    .exclamation-icon {
+        width: 12px;
+        height: 12px;
+        font-size: 9px;
+        top: -4px;
+        right: -4px;
+    }
+
+    /* Адаптивность тултипов - ФИНАЛЬНЫЕ ИСПРАВЛЕНИЯ */
+    .question-icon[data-tooltip]::after,
+    .cost-with-tooltip[data-tooltip]::after,
+    .exclamation-icon[data-tooltip]::after {
+        max-width: 160px;
+        padding: 6px 10px;
+        font-size: 10px;
+        bottom: calc(100% + 6px);
+    }
+
+    .exclamation-icon[data-tooltip]::after {
+        width: 150px;
+        max-width: 85vw;
+    }
+
+    .exclamation-icon[data-tooltip]::before {
+        bottom: calc(100% - 2px);
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-height: 600px) and (orientation: landscape) {
+    .admission-section {
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+
+    .form-card {
+        min-height: 150px;
+    }
+
+    .requirements-card {
+        min-height: auto;
+    }
+
+    /* Дополнительные исправления для ландшафтного режима */
+    .exclamation-icon[data-tooltip]::after {
+        bottom: calc(100% + 10px);
+        left: 50% !important;
+        transform: translateX(-50%) translateY(0) !important;
+    }
+}

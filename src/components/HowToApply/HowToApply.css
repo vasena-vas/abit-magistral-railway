@@ -1,0 +1,978 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.how-to-apply-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    margin: 0;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible !important;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible !important;
+}
+
+/* Заголовок блока - как в ContactForm */
+.apply-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apply-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apply-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Селектор типа обучения */
+.study-type-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.selector-label {
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.study-type-buttons {
+    display: flex;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.study-type-btn {
+    padding: 8px 20px;
+    border: 2px solid #323C8D;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #323C8D;
+    min-width: 100px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.study-type-btn:hover {
+    background-color: #f0f2ff;
+}
+
+.study-type-btn.active {
+    background-color: #323C8D;
+    color: white;
+}
+
+/* Таймлайн */
+.calendar-timeline {
+    position: relative;
+    padding-left: 140px;
+    min-height: 800px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible !important;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: transparent;
+    border-left: 2px dashed #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+    align-items: flex-start;
+    min-height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible !important;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Дата в таймлайне */
+.timeline-date {
+    position: absolute;
+    left: -140px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Цвета дат */
+.date-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.3;
+    flex: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Простые селекторы для цветов дат */
+.date-text.orange {
+    color: #F54A00 !important;
+}
+
+.date-text.blue {
+    color: #323C8D !important;
+}
+
+.date-text.green {
+    color: #8BA474 !important;
+}
+
+.date-time {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Кружки на линии */
+.date-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: -8px;
+}
+
+/* Цвета кружков */
+.circle-orange {
+    background-color: #F54A00;
+    box-shadow: 0 0 0 2px #F54A00;
+}
+
+.circle-blue {
+    background-color: #323C8D;
+    box-shadow: 0 0 0 2px #323C8D;
+}
+
+.circle-green {
+    background-color: #8BA474;
+    box-shadow: 0 0 0 2px #8BA474;
+}
+
+.circle-gray {
+    background-color: #7f8c8d;
+    box-shadow: 0 0 0 2px #7f8c8d;
+}
+
+/* Контент таймлайна */
+.timeline-content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 80px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid;
+    overflow: visible !important;
+}
+
+.timeline-content-inner {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible !important;
+}
+
+/* Цвета карточек */
+.card-orange {
+    background-color: #FFF7ED;
+}
+
+.card-blue {
+    background-color: #F4F4F8;
+}
+
+.card-green {
+    background-color: #F8F9F7;
+}
+
+.card-gray {
+    background-color: #f5f5f5;
+}
+
+/* Цвет бордера для карточек */
+.timeline-content.card-orange {
+    border-color: #F54A00 !important;
+}
+
+.timeline-content.card-blue {
+    border-color: #323C8D !important;
+}
+
+.timeline-content.card-green {
+    border-color: #8BA474 !important;
+}
+
+.timeline-content.card-gray {
+    border-color: #ddd !important;
+}
+
+/* Заголовок с иконкой вопроса */
+.title-with-hint {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: visible !important;
+}
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 700 !important;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-orange .timeline-title {
+    color: #F54A00;
+    font-weight: 700 !important;
+}
+
+.card-blue .timeline-title {
+    color: #323C8D;
+    font-weight: 700 !important;
+}
+
+.card-green .timeline-title {
+    color: #8BA474;
+    font-weight: 700 !important;
+}
+
+.timeline-description {
+    font-size: 15px;
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Контейнер для ссылок */
+.links-container {
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.timeline-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: white;
+    border: 1px solid #323C8D;
+    border-radius: 6px;
+    color: #323C8D;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.timeline-link:hover {
+    background-color: #f0f2ff;
+    transform: translateY(-1px);
+}
+
+.additional-link {
+    display: block;
+    width: fit-content;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Для оранжевой карточки */
+.card-orange .timeline-link {
+    border-color: #F54A00;
+    color: #F54A00;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-orange .timeline-link:hover {
+    background-color: #fff0e6;
+}
+
+/* Для синей карточки */
+.card-blue .timeline-link {
+    border-color: #323C8D;
+    color: #323C8D;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-blue .timeline-link:hover {
+    background-color: #f0f2ff;
+}
+
+/* Для зеленой карточки */
+.card-green .timeline-link {
+    border-color: #8BA474;
+    color: #8BA474;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-green .timeline-link:hover {
+    background-color: #f0f5ea;
+}
+
+/* Акцентная кнопка в первой карточке */
+.accent-link {
+    background-color: #FF6B35 !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Для синих карточек акцентная кнопка должна быть синей */
+.card-blue .accent-link {
+    background-color: #323C8D !important;
+    color: white !important;
+    border: none !important;
+}
+
+.accent-link:hover {
+    background-color: #E55A2B !important;
+    color: white !important;
+}
+
+/* Для синих карточек акцентная кнопка при наведении */
+.card-blue .accent-link:hover {
+    background-color: #2a347a !important;
+}
+
+/* Плейсхолдер для кнопки */
+.button-placeholder {
+    font-size: 14px;
+    color: #7f8c8d;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    border: 1px dashed #ddd;
+    margin-top: 10px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Таймер обратного отсчета */
+.countdown-timer {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Цвет отсчета */
+.card-orange .countdown-timer {
+    color: #F54A00 !important;
+    background-color: #FFF7ED;
+}
+
+.card-blue .countdown-timer {
+    color: #323C8D !important;
+    background-color: #F4F4F8;
+}
+
+.card-green .countdown-timer {
+    color: #8BA474 !important;
+    background-color: #F8F9F7;
+}
+
+/* Последний блок */
+.final-placeholder {
+    font-size: 15px;
+    color: #7f8c8d;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Вопросительные значки */
+.question-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: help;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Цвета вопросиков */
+.hint-orange {
+    background-color: #F54A00;
+}
+
+.hint-orange:hover {
+    background-color: #d43d00;
+}
+
+.hint-blue {
+    background-color: #323C8D;
+}
+
+.hint-blue:hover {
+    background-color: #2a347a;
+}
+
+.hint-green {
+    background-color: #8BA474;
+}
+
+.hint-green:hover {
+    background-color: #6f8a5b;
+}
+
+/* ПОДСКАЗКА ЧЕРЕЗ ПСЕВДОЭЛЕМЕНТЫ - ИСПРАВЛЕННАЯ ВЕРСИЯ */
+.question-icon[data-tooltip] {
+    position: relative;
+}
+
+.question-icon[data-tooltip]:hover::before,
+.question-icon[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Подсказка - адаптивная */
+.question-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border: 2px solid #323C8D;
+    border-radius: 8px;
+    padding: 12px 14px; /* Уменьшили горизонтальные отступы */
+    max-width: 180px; /* Уменьшили с 260px */
+    min-width: 120px; /* Уменьшили с 180px */
+    width: max-content;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.4; /* Немного уменьшили межстрочный интервал */
+    color: #2c3e50;
+    text-align: left;
+    font-weight: 400;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Стрелочка подсказки */
+.question-icon[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #323C8D;
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Для оранжевых карточек - изменяем цвет подсказки */
+.card-orange .question-icon[data-tooltip]::after {
+    border-color: #F54A00;
+}
+
+.card-orange .question-icon[data-tooltip]::before {
+    border-top-color: #F54A00;
+}
+
+/* Для синих карточек - изменяем цвет подсказки */
+.card-blue .question-icon[data-tooltip]::after {
+    border-color: #323C8D;
+}
+
+.card-blue .question-icon[data-tooltip]::before {
+    border-top-color: #323C8D;
+}
+
+/* Для зеленых карточек - изменяем цвет подсказки */
+.card-green .question-icon[data-tooltip]::after {
+    border-color: #8BA474;
+}
+
+.card-green .question-icon[data-tooltip]::before {
+    border-top-color: #8BA474;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    /* Подсказки для планшетов */
+    .question-icon[data-tooltip]::after {
+        max-width: 160px; /* Уменьшили с 240px */
+        min-width: 110px; /* Уменьшили с 160px */
+        padding: 10px 12px; /* Уменьшили горизонтальные отступы */
+        font-size: 12px;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .question-icon[data-tooltip]::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Подсказки для мобильных */
+    .question-icon[data-tooltip]::after {
+        max-width: 150px; /* Уменьшили с 220px */
+        min-width: 95px;  /* Уменьшили с 140px */
+        padding: 8px 10px; /* Уменьшили горизонтальные отступы */
+        font-size: 12px;
+        bottom: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        /* Для очень длинного текста */
+        max-width: min(150px, calc(100vw - 40px)); /* Уменьшили с 220px */
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 4px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Подсказки для маленьких экранов */
+    .question-icon[data-tooltip]::after {
+        max-width: 135px; /* Уменьшили с 200px */
+        min-width: 80px;  /* Уменьшили с 120px */
+        padding: 6px 8px; /* Уменьшили горизонтальные отступы */
+        font-size: 11px;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(135px, calc(100vw - 30px)); /* Уменьшили с 200px */
+    }
+
+    .question-icon[data-tooltip]::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 380px) {
+    /* Подсказки для очень маленьких экранов */
+    .question-icon[data-tooltip]::after {
+        max-width: 120px; /* Уменьшили с 180px */
+        min-width: 70px;  /* Уменьшили с 100px */
+        padding: 5px 7px; /* Уменьшили горизонтальные отступы */
+        font-size: 10px;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(120px, calc(100vw - 20px)); /* Уменьшили с 180px */
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #323C8D;
+    }
+}
+@media (max-width: 768px) {
+    .how-to-apply-section {
+        padding: 40px 15px;
+        overflow: visible !important;
+    }
+
+    /* Адаптив для заголовка как в ContactForm */
+    .apply-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    .apply-header h2 {
+        white-space: normal;
+        font-size: 24px;
+    }
+
+    .apply-header p {
+        font-size: 16px;
+    }
+
+    .study-type-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .calendar-timeline {
+        padding-left: 100px;
+        min-height: 700px;
+        overflow: visible !important;
+    }
+
+    .timeline-line {
+        left: 92px;
+    }
+
+    .timeline-date {
+        left: -100px;
+        width: 80px;
+        gap: 8px;
+    }
+
+    .timeline-line {
+        left: 92px;
+    }
+
+    .date-text {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .date-time {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .timeline-title {
+        font-size: 16px;
+        font-weight: 700 !important;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-link {
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .date-circle {
+        width: 14px;
+        height: 14px;
+        border-width: 2px;
+    }
+
+    .question-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    /* Подсказки для мобильных */
+    .question-icon[data-tooltip]::after {
+        max-width: 220px;
+        min-width: 140px;
+        padding: 8px 12px;
+        font-size: 12px;
+        bottom: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        /* Для очень длинного текста */
+        max-width: min(220px, calc(100vw - 40px));
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 4px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .disabled-button {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .countdown-timer {
+        font-size: 12px;
+        padding: 6px 10px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 576px) {
+    .how-to-apply-section {
+        padding: 30px 10px;
+        overflow: visible !important;
+    }
+
+    .apply-header h2 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .apply-header p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .calendar-timeline {
+        padding-left: 80px;
+        min-height: 650px;
+        overflow: visible !important;
+    }
+
+    .timeline-date {
+        left: -80px;
+        width: 60px;
+        gap: 6px;
+    }
+
+    .timeline-line {
+        left: 73px;
+    }
+
+    .date-text {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .date-time {
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .timeline-title {
+        font-size: 15px;
+        font-weight: 700 !important;
+    }
+
+    .timeline-description {
+        font-size: 13px;
+    }
+
+    .links-row {
+        flex-direction: column;
+    }
+
+    .timeline-link {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .additional-link {
+        width: 100%;
+    }
+
+    .countdown-timer {
+        font-size: 12px;
+        padding: 6px 10px;
+        font-weight: 600;
+    }
+
+    .timeline-content {
+        padding: 12px;
+        min-height: 70px;
+    }
+
+    .date-circle {
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+    }
+
+    .question-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+    /* Подсказки для маленьких экранов */
+    .question-icon[data-tooltip]::after {
+        max-width: 200px;
+        min-width: 120px;
+        padding: 6px 10px;
+        font-size: 11px;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(200px, calc(100vw - 30px));
+    }
+
+    .question-icon[data-tooltip]::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .disabled-button {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 380px) {
+    .study-type-btn {
+        padding: 6px 15px;
+        font-size: 13px;
+        min-width: 80px;
+        font-weight: 600;
+    }
+
+    .calendar-timeline {
+        padding-left: 70px;
+    }
+
+    .timeline-date {
+        left: -70px;
+        width: 50px;
+        gap: 5px;
+    }
+
+    .timeline-line {
+        left: 66px;
+    }
+
+    .date-text {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .date-time {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .date-circle {
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+
+    .timeline-title {
+        font-size: 14px;
+        font-weight: 700 !important;
+    }
+
+    .question-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    /* Подсказки для очень маленьких экранов */
+    .question-icon[data-tooltip]::after {
+        max-width: 180px;
+        min-width: 100px;
+        padding: 5px 8px;
+        font-size: 10px;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        max-width: min(180px, calc(100vw - 20px));
+    }
+
+    .question-icon[data-tooltip]::before {
+        bottom: calc(100% + 2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #323C8D;
+    }
+}
