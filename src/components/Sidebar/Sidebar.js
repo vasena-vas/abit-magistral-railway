@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 <div className="university-logo">
                     {/* ВСЕГДА показываем основное лого, независимо от устройства */}
                     <img
-                        src="/images/sidebar/logo.svg"
+                        src={process.env.PUBLIC_URL + "/images/sidebar/logo.svg"}
                         alt="МГТУ им. Г.И. Носова"
                         className="logo-image"
                     />

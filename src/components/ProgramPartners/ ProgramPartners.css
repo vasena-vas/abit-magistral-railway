@@ -1,6 +1,6 @@
 /* ProgramPartners.css */
 
-/* Стили для блока партнеров - фон как в картинке */
+/* Стили для блока партнеров */
 .partners-section {
     margin: 50px 0 30px 0;
     position: relative;
@@ -9,11 +9,7 @@
     border: none;
     box-shadow: none;
     padding: 0;
-
 }
-
-/* Разделительная линия сверху */
-
 
 /* Контейнер для всего контента */
 .partners-container {
@@ -21,7 +17,7 @@
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
-    border:#8BA474 2px solid ;
+    border: #8BA474 2px solid;
     border-radius: 15px;
 }
 
@@ -32,11 +28,9 @@
     align-items: center;
     min-height: 100px;
     gap: 20px;
-
-
 }
 
-/* Заголовок "Партнёры программы:" - цвет #8BA474 */
+/* Заголовок "Партнёры программы:" */
 .partners-title {
     font-size: 30px;
     font-weight: 700;
@@ -49,7 +43,6 @@
     white-space: nowrap;
     flex-shrink: 0;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 /* Обертка для бегущей строки */
@@ -58,6 +51,7 @@
     flex-grow: 1;
     overflow: hidden;
     height: 100px;
+    min-width: 0; /* важно для корректного сжатия во flex-контейнере */
 }
 
 /* Градиенты для растушевания по краям */
@@ -84,6 +78,7 @@
 /* Карусель с логотипами */
 .partners-carousel {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -92,14 +87,14 @@
 .partners-track {
     display: flex;
     align-items: center;
+    width: max-content; /* дорожка расширяется по содержимому */
     animation: scrollPartners 30s linear infinite;
     will-change: transform;
-    gap: 0; /* Убираем gap для равномерной прокрутки */
 }
 
 /* Логотипы партнеров */
 .partner-logo {
-    height:45px;
+    height: 45px;
     width: auto;
     margin: 0 40px;
     object-fit: contain;
@@ -120,7 +115,7 @@
 
 /* Дополнительные карточки для дублирования (скрытые) */
 .partner-item {
-    display: none; /* Скрываем старые карточки */
+    display: none;
 }
 
 /* Разделительная линия снизу */
